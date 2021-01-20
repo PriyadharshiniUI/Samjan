@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="row header" style="text-align:center;font-style: inherit;font-size: 22px;
+  margin-left: 369px;padding-top: 41px;color: #505050;">
+    <h3 style="margin-left: -154px; margin-top: -14px;font-size: 21px;">COUNTRY</h3>
+    </div>
+
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">ADD COUNTRY</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            
+            <div class="input-group">
+              <input id="country"  #country type="text" class="form-control" placeholder="Enter Country" name="country">
+            </div>
+          </div>
+          <div class="form-group">
+            
+            <div class="input-group">
+              <input id="alternateCountry"  #alternateCountry type="text" class="form-control" placeholder="Enter Alternate Country Name" name="alternateCountry">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click');addCountry(country.value,alternateCountry.value)">Save</button>
+      </div>
+    </ng-template>
+
+    <ng-template #editContent let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Edit Country</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+   
+            <div class="input-group">
+              <input id="country" #editCountryVal type="text" class="form-control" placeholder="Enter Country" name="editCountry"
+                required>
+            </div>
+   
+          </div>
+          <div class="form-group">
+   
+            <div class="input-group">
+              <input id="alternateCountry" #editAlternateVal type="text" class="form-control" placeholder="Enter Alternate Country Name" name="editCountry"
+                required>
+            </div>
+   
+          </div>
+          <button type="submit" class="btn btn-outline-dark" 
+            (click)="modal.close('Save click');updateCountry(editCountryVal.value,editAlternateVal.value)">Update</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <!--<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click');updateComment(comment.value)">Update</button>-->
+      </div>
+   
+    </ng-template>
+
+
+    <i class="fa fa-plus-square-o" style="font-size:30px;color:dodgerblue;margin-left: 766px;margin-top: 12px;" (click)="open(content)"></i>
+         
+    <table datatable class="table table-striped" style="border-inline: black;"  id="tableData">
+      <thead style="background-color: grey;">
+        <tr>
+          <th>COUNTRY</th>
+          <th>ALTERNATE COUNTRY NAME</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let country of countryList">
+          <td>{{ country.Country }}</td>
+          <td>{{ country.Alternate_Name}}</td>
+          <td>
+            <i class="fa fa-pencil-square-o fa-2x text-warning" aria-hidden="true" style="font-size:25px;" (click)="edit(editContent);getCountryId(country.CountryCode)"></i>
+            <i class="fa fa-trash-o fa-2x text-danger" aria-hidden="true" style="font-size:25px;padding:10px;text-align: center;" (click)="deleteCountry(country.CountryCode)"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+          
+  </div>

@@ -1,0 +1,59 @@
+
+.container{
+    background-color: #E8E8E8;
+    height: 514px;
+    margin-left: 193px;
+    width: 814px;
+    font-size: 14px;
+}
+
+/*#title{
+    font-style: inherit;
+    font-size: 22px;
+    margin-left: 369px;
+    padding-top: 41px;
+    color: #505050;
+    font-family: math;
+}
+
+div.form-group{
+    margin:0 0 0 0;
+}
+
+button, input, optgroup, select, textarea {
+    margin-top: 27px;
+    margin-right: -159px;
+    margin-bottom: 0px;
+    margin-left: 157px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    height: 34px;
+}
+
+img{
+    width: 24px;
+    height: 24px;
+    margin-top: 33px;
+    margin-right: 114px;
+}*/
+
+label {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    margin-left: 138px !important;
+}
+
+.dataTables_wrapper {
+   
+    width: 70%;
+    margin: 4px 0px 0px 146px;
+}
+
+span#spacer{
+    width:10px;
+}
+
+table.dataTable th.dt-center, table.dataTable td.dt-center, table.dataTable td.dataTables_empty {
+    display:none;
+}

@@ -1,0 +1,32 @@
+ul.list-inline{
+    margin: -22px 0 0 322px;
+    left:0;
+    list-style: none;
+  
+}
+.top-nav{
+    background-color:#F5F5F5;
+    
+}
+span.user-icon{
+    
+    text-decoration: none;
+    list-style: none;
+    color: #515356;
+    line-height: 50px;
+    background: #f3f3f3;
+    line-height: 41px;
+    top: 44px;
+    margin: -64px 27px 35px 22px;
+    padding: 0 0 0 15px;
+    text-transform: capitalize;
+    width: 164px;
+    height: 60px;
+   
+}
+
+span.user-icon{
+    float:right;
+}
+
+
