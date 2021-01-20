@@ -12,7 +12,7 @@ export class CountryService {
   constructor(private _http:HttpClient) { }
 
   getPosts():Observable<any[]>{
-    return this._http.get<any[]>(this.baseURL+'api/countries');
+    return this._http.get<any[]>(this.baseURL+'api/countries'); or /articles?page[number]=3&page[size]=1 or http://www.lib4dev.in/info/infinum/Japx/117575371
 
       
   }
